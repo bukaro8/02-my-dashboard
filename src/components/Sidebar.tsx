@@ -2,8 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { BiLogoReact } from 'react-icons/bi';
-import { IoBrowsersOutline, IoCalculator } from 'react-icons/io5';
+import {
+	IoBrowsersOutline,
+	IoCalculator,
+	IoHeartOutline,
+} from 'react-icons/io5';
 import { SiPokemon } from 'react-icons/si';
+import { MdOutlineCatchingPokemon } from 'react-icons/md';
 import { SidebarItems } from './index';
 
 const menuItems = [
@@ -25,12 +30,18 @@ const menuItems = [
 		title: 'Pokemons',
 		subtitle: 'Static Pokemons',
 	},
+	{
+		path: '/dashboard/favorites',
+		icon: <IoHeartOutline size={40} />,
+		title: 'Favorites',
+		subtitle: 'Favorites Global State',
+	},
 ];
 const Sidebar = () => {
 	return (
 		<div
 			id='menu'
-			className='bg-gray-900 min-h-screen z-10 w-[400px] text-slate-300  left-0  overflow-y-scroll'
+			className='min-w-[250px] bg-gray-900 min-h-screen z-10 w-[400px] text-slate-300  left-0  overflow-y-scroll'
 		>
 			<div id='logo' className='my-4 px-6'>
 				<h1 className='text-lg md:text-2xl font-bold text-white'>
