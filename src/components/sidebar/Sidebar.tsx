@@ -9,7 +9,7 @@ import {
 } from 'react-icons/io5';
 import { SiPokemon } from 'react-icons/si';
 import { MdOutlineCatchingPokemon } from 'react-icons/md';
-import { SidebarItems } from './index';
+import { SidebarItems } from '../index';
 
 const menuItems = [
 	{

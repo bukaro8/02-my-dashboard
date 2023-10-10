@@ -1,3 +1,3 @@
-export { default as Sidebar } from './Sidebar';
-export { default as SidebarItems } from './SidebarItems';
-export { SimpleWidget } from './SimpleWidget';
+export { default as Sidebar } from './sidebar/Sidebar';
+export { default as SidebarItems } from './sidebar/SidebarItems';
+export { SimpleWidget } from './dashboard/SimpleWidget';

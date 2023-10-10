@@ -10,7 +10,7 @@ const CounterPage = () => {
 	return (
 		<div className='flex flex-col justify-center items-center h-screen w-full'>
 			<span className=''>Cart</span>
-			<CartCounter value={2} />
+			<CartCounter value={20} />
 		</div>
 	);
 };
