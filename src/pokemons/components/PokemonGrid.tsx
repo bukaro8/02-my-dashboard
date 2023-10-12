@@ -2,10 +2,14 @@ import { SimplePokemon } from '@/app/interface';
 import { PokemonCard } from '.';
 
 interface Props {
-	pokemons: SimplePokemon[];
+	pokemons: PokemonBasic[];
+}
+export interface PokemonBasic {
+	id: string;
+	name: string;
 }
 const PokemonGrid = ({ pokemons }: Props) => {
-	const showPokemons = pokemons.map((el: SimplePokemon) => (
+	const showPokemons = pokemons.map((el) => (
 		<PokemonCard key={el.id} {...el} />
 	));
 	return (

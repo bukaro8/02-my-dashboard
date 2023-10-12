@@ -1,5 +1,6 @@
 import { PokemonsResponse, SimplePokemon } from '@/app/interface';
 import { PokemonGrid } from '@/pokemons/components';
+import { PokemonBasic } from '@/pokemons/components/PokemonGrid';
 import { Metadata } from 'next';
 
 export function generateMetadata(): Metadata {
@@ -28,7 +29,13 @@ export const getPokemons = async (
 };
 
 const PokemonsPage = async () => {
-	const pokemons = await getPokemons(151);
+	const pokemonsFull = await getPokemons(151);
+	const pokemons: PokemonBasic[] = pokemonsFull.map((poke) => {
+		return {
+			name: poke.name,
+			id: poke.id,
+		};
+	});
 
 	return (
 		<div className='flex flex-col'>
