@@ -4,16 +4,9 @@ import { PokemonGrid } from '.';
 
 const PokemonFavoriteGrid = () => {
 	const listOfFavorites = useAppSelector((state) => state.pokemons);
-	const isEmpty = Object.keys(listOfFavorites).length;
-	let pokemons = [];
-	if (isEmpty > 0) {
-		for (let i = 1; i <= isEmpty; i++) {
-			pokemons.push({
-				name: `${listOfFavorites[i].name}`,
-				id: listOfFavorites[i].id,
-			});
-		}
-	}
+	const isEmpty = Object.values(listOfFavorites.favorites);
+
+	let pokemons = [...isEmpty];
 
 	return (
 		<div>

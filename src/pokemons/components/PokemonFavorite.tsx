@@ -4,13 +4,8 @@ import { addToFavorites } from '@/store/pokemons/pokemons';
 import { IoHeart, IoHeartOutline } from 'react-icons/io5';
 import { PokemonBasic } from './PokemonGrid';
 
-// const isFavorite = async () => {
-// 	const data = await fetch('/api/pokemons').then((res) => res.json());
-// 	return data;
-// };
-
 const PokemonFavorite = (pokemon: PokemonBasic) => {
-	const favorites = useAppSelector((store) => store.pokemons);
+	const favorites = useAppSelector((store) => store.pokemons.favorites);
 	const dispatch = useAppDispatch();
 	return (
 		<div className='px-4 py-2 hover:bg-gray-100 w-full flex cursor-pointer'>
